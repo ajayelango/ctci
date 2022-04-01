@@ -32,11 +32,11 @@ public class Ex2 {
 		int count1s = 0;
 		for(Map.Entry<Character, Integer> hme : hm.entrySet()) {
 			int val = hme.getValue();
-			if(val > 1 && (val % 2 != 0)) {
-				System.out.println("False");
+			if(count1s > 1 && (val % 2 != 0)) {
 				res = false;
+				++count1s;
 				break;
-			} else if(val == 1) {
+			} else if(val % 2 != 0) {
 				++count1s;
 			}
 			
